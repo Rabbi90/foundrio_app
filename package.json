@@ -1,0 +1,23 @@
+{
+  "name": "foundrio_app",
+  "version": "1.0.0",
+  "description": "Interactive mobile-first app mockup inspired by the provided Foundrio Android/iOS design.",
+  "main": "app.js",
+  "scripts": {
+    "serve": "python3 -m http.server 4173",
+    "mobile:init": "npx cap init Foundrio com.foundrio.app --web-dir .",
+    "mobile:sync": "npx cap sync",
+    "mobile:android": "npx cap add android && npx cap sync android",
+    "mobile:ios": "npx cap add ios && npx cap sync ios"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@capacitor/cli": "^7.0.0",
+    "@capacitor/core": "^7.0.0",
+    "@capacitor/android": "^7.0.0",
+    "@capacitor/ios": "^7.0.0"
+  }
+}

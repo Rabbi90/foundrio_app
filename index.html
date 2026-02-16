@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#0f4f95" />
+    <title>Foundrio Mobile Mockup</title>
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <div class="phone">
+        <div class="status-bar">
+          <span>9:41</span>
+          <span>🔋 97%</span>
+        </div>
+
+        <header class="top-bar">
+          <button id="menuButton" class="icon-btn" aria-label="Open menu">☰</button>
+          <h1 id="screenTitle">Foundrio</h1>
+          <button id="notifyButton" class="icon-btn" aria-label="Notifications">🔔</button>
+        </header>
+
+        <section id="toast" class="toast" aria-live="polite"></section>
+
+        <section id="loginScreen" class="screen active">
+          <div class="hero">
+            <div class="logo-mark">F</div>
+            <h2>Foundrio</h2>
+            <p>Design | Development | Consultancy</p>
+          </div>
+          <h3>Welcome Back!</h3>
+          <form id="loginForm" class="stack">
+            <input id="emailInput" type="text" placeholder="Email or Phone" required />
+            <input id="passwordInput" type="password" placeholder="Password" required />
+            <button type="submit" class="btn gold">Login</button>
+          </form>
+          <div class="meta-links">
+            <button class="link-btn" id="registerBtn">Register as Client</button>
+            <button class="link-btn" id="forgotBtn">Forgot Password?</button>
+          </div>
+        </section>
+
+        <section id="dashboardScreen" class="screen">
+          <div class="welcome-card">
+            <h3>Hello, <span id="userNameLabel">Admin</span></h3>
+            <p>Track every project at a glance.</p>
+          </div>
+          <div class="stats-grid" id="statsGrid"></div>
+          <h4>Projects</h4>
+          <div id="projectList" class="list"></div>
+        </section>
+
+        <section id="projectsScreen" class="screen">
+          <h3>Your Projects</h3>
+          <div id="clientProjectList" class="list"></div>
+        </section>
+
+        <section id="detailScreen" class="screen">
+          <div id="detailHeader" class="detail-header"></div>
+          <h4>Project Progress</h4>
+          <div id="progressList" class="list"></div>
+          <button class="btn" id="rajukStatusBtn">Open RAJUK Status</button>
+        </section>
+
+        <section id="rajukScreen" class="screen">
+          <h3>RAJUK Status</h3>
+          <div id="rajukList" class="list"></div>
+          <button class="btn" id="openDocumentsBtn">View Documents</button>
+        </section>
+
+        <section id="documentsScreen" class="screen">
+          <h3>Documents</h3>
+          <div id="documentsList" class="list"></div>
+        </section>
+
+        <nav class="bottom-nav">
+          <button data-screen="dashboardScreen" class="nav-btn active">Dashboard</button>
+          <button data-screen="projectsScreen" class="nav-btn">Projects</button>
+          <button data-screen="detailScreen" class="nav-btn">Progress</button>
+          <button data-screen="documentsScreen" class="nav-btn">Docs</button>
+        </nav>
+      </div>
+
+      <aside id="drawer" class="drawer">
+        <h3>Quick Navigation</h3>
+        <button data-screen="dashboardScreen">Admin Dashboard</button>
+        <button data-screen="projectsScreen">Client Projects</button>
+        <button data-screen="detailScreen">Project Progress</button>
+        <button data-screen="rajukScreen">RAJUK Status</button>
+        <button data-screen="documentsScreen">Documents</button>
+        <button id="logoutBtn" class="danger">Logout</button>
+      </aside>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
